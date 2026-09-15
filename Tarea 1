@@ -30,21 +30,54 @@ Se puede usar el "str" para poder juntarse
  a. cambiar algunas letras por números
 	palabra = "hola" 
 	en "Ho14"
+>>> palabra="hola"
+>>> palabra[0:2]+str(14)
+'ho14'
  b. remover espacios
 	palabra = "  hola"
 	en "hola"
+>>> palabra=" hola"
+>>> palabra[1:5]
+'hola'
  c. cambiar mayúsculas y minúsculas
     palabra = "HoLa"
 	en "hOlA"
+>>> palabra="HoLa"
+>>> palabra.swapcase()
+'hOlA' Para este invesigue el metodo ya que no se me ocurrio con lo que vimos en clase :(
  d. poner la primera en mayúscula
 	palabra = "hola"
 	en "Hola"
+>>> palabra="hola"
+>>> a="H"
+>>> a+palabra[1:4]
+'Hola'
 4. Explica qué hacen los métodos y da un ejemplo: (2 puntos)
- a. count()
- b. find()
- c. isdigit()
- d. replace()
+ a. count():Cuenta cuantas veces se repite un caracter en una cadena
+>>> a="Dressrosa"
+>>> print(a.count("s"))
+ b. find() Permite buscar dentro de una cadena una subcadena
+>>> b="UNAM super kul"
+>>> print(b.find("super"))
+ c. isdigit(): Comprueba que todos los caracteres de la cadena con numeros si si es True si tiene cualquier otro caracter es False
+>>> c="1,2,3,4,5,6,7,8"
+>>> print(c.isdigit())
+False
+d. replace(): Remplaza partes una cadena por otra pero no modifica la cadena original
+>>> a="Feliz cumpleaños"
+>>> b=a.replace("cumpleaños","navidad")
+>>> print(b)
+Feliz navidad
 5. Qué problema tiene declarar estas variables? (1.5 puntos)
  oración larga = 'hola mundo'
  palabra = 'hola' 'mundo'
+>>> Frase larga= "Hola mundo"
+  File "<python-input-0>", line 1
+    Frase larga= "Hola mundo"
+          ^^^^^
+SyntaxError: invalid syntax La sintaxis es incorrecta por dejar el espacio en el nombre de las variables
+palabra = 'hola' 'mundo'
+>>> palabra = 'hola' 'mundo'
+>>> palabra
+'holamundo' Aunque exista un espacio aparante entre las variables al procesarse no existe solo se junta
 6. Investigar "fstring": qué son, cómo se usan y un ejemplo. (2.5 puntos)
