@@ -81,3 +81,7 @@ palabra = 'hola' 'mundo'
 >>> palabra
 'holamundo' Aunque exista un espacio aparante entre las variables al procesarse no existe solo se junta
 6. Investigar "fstring": qué son, cómo se usan y un ejemplo. (2.5 puntos)
+F en Fstring representa Format o formatear asi que es como formatear una cadena, pero mas bien se usa para modificarla de una manera optima sin tener que escribirla toda de nuevo
+>>> nombre="Leo"
+>>> print(f"Hola {nombre} como estás")
+Hola Leo como estás
